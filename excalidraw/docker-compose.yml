@@ -1,0 +1,15 @@
+services:
+  excalidraw:
+    image: excalidraw/excalidraw:latest
+    container_name: excalidraw-container
+    ports:
+      # 5000 is used by macOS AirPlay Receiver; pick a free host port
+      - "8085:80"
+    restart: unless-stopped
+
+  excalidraw-mcp-canvas:
+    image: ghcr.io/yctimlin/mcp_excalidraw-canvas:latest
+    container_name: excalidraw-mcp-canvas-container
+    ports:
+      - "3000:3000"
+    restart: unless-stopped

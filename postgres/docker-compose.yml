@@ -12,5 +12,5 @@ services:
       POSTGRES_PASSWORD: pass
       POSTGRES_DB: demo
     volumes:
-      - ./postgresDb:/var/lib/postgresql/data
+      - ./postgresDb:/var/lib/postgresql
     restart: unless-stopped
